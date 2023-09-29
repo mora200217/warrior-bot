@@ -1,0 +1,10 @@
+.card-design{
+    background: #EEEEEE;
+    text-align: left;
+    border-radius: 15px;
+    margin: 1rem;
+}
+
+.card-design h4{
+    font-weight: 700;
+}
