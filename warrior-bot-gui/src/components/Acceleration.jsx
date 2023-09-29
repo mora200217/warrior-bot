@@ -30,16 +30,14 @@ export const options = {
   plugins: {
     title: {
       display: true,
-      text: "Sensor Ultrasónico",
+      text: "Aceleración",
     },
   },
-  width: 600, // Ancho del gráfico
-  height: 400, // Altura del gráfico
 };
 
 const labels = new Array(1000).map((e, idx) => idx + 1);
 
-export const Sensor = (props) => {
+export const Acceleration = (props) => {
   const [myData, setData] = useState([{ x: 0, y: 3 }]);
 
   useEffect(() => {
@@ -49,7 +47,7 @@ export const Sensor = (props) => {
     datasets: [
       {
         showLine: true,
-        label: "Tiempo vs distancia",
+        label: "Aceleración vs velocidad",
         data: myData,
         borderColor: "rgb(255, 99, 132)",
         backgroundColor: "rgba(255, 99, 132, 0.5)",
@@ -59,7 +57,7 @@ export const Sensor = (props) => {
 
   return (
     <div className="card-design p-3 px-4 w-50">
-      <h4> Distancia </h4>
+      <h4>Aceleración</h4>
       {/* Controles */}
       <Scatter options={options} data={data} />;
     </div>
